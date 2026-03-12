@@ -19,7 +19,7 @@ Or in `vitest.config.ts`:
 ```ts
 export default defineConfig({
   test: {
-    reporters: ['vitest-silvery-dots'],
+    reporters: ["vitest-silvery-dots"],
   },
 })
 ```
