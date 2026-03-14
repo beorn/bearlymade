@@ -1,7 +1,13 @@
 {
   "name": "bearlymade",
   "private": true,
-  "description": "Bearly Made — small dev tools",
+  "description": "Bearly Made — small, focused developer tools for testing and terminal workflows",
+  "keywords": [
+    "developer-tools",
+    "testing",
+    "vitest",
+    "terminal"
+  ],
   "workspaces": [
     "packages/*"
   ]

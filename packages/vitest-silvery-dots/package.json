@@ -3,11 +3,16 @@
   "version": "0.1.0",
   "description": "Streaming dot reporter for Vitest, built with Silvery React terminal UI",
   "keywords": [
+    "dot-reporter",
     "dots",
     "reporter",
     "silvery",
+    "streaming",
     "terminal",
-    "vitest"
+    "test-reporter",
+    "tui",
+    "vitest",
+    "vitest-reporter"
   ],
   "homepage": "https://github.com/beorn/bearlymade",
   "bugs": {
