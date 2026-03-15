@@ -4,9 +4,9 @@
   "description": "Bearly Made — small, focused developer tools for testing and terminal workflows",
   "keywords": [
     "developer-tools",
+    "terminal",
     "testing",
-    "vitest",
-    "terminal"
+    "vitest"
   ],
   "workspaces": [
     "packages/*"
