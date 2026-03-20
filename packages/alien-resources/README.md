@@ -121,6 +121,11 @@ resource.dispose()
 
 This package is **not API-compatible** with SolidJS `createResource` or Angular `resource()`. It follows alien-signals conventions (callable accessors: `resource()` not `resource.value`, `.loading()` not `.loading`). SolidJS returns `[data, { loading, error, refetch, mutate }]` (tuple); this returns a single callable with signal sub-properties. The concepts are the same; the ergonomics match the alien-signals ecosystem.
 
+## See Also
+
+- **[alien-projections](https://www.npmjs.com/package/alien-projections)** — Incremental reactive collection transforms for alien-signals. `createProjection(source, { key, map, filter, sort })` only re-maps changed entries. The companion package for derived collections.
+- **[@silvery/signals](https://silvery.dev)** — The [Silvery](https://silvery.dev) TUI framework includes `alien-resources` and `alien-projections` as part of its `@silvery/signals` package, adding React integration (`useSignal`), deep stores (`createStore`), and model factories on top.
+
 ## License
 
 MIT

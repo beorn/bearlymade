@@ -74,6 +74,11 @@ This means that if you have 10,000 items and change one, only that one item's `m
 
 This package is **not API-compatible** with SolidJS projections or Signia. It follows alien-signals conventions (callable accessors, `computed()` return type) and provides a broader API (filter + sort alongside map). SolidJS `createProjection` focuses on key-indexed UI reconciliation; this package targets general incremental collection transforms.
 
+## See Also
+
+- **[alien-resources](https://www.npmjs.com/package/alien-resources)** — Async signal bridge for alien-signals. `createResource(fetcher)` with loading/error states and automatic cancellation. The companion package for async data.
+- **[@silvery/signals](https://silvery.dev)** — The [Silvery](https://silvery.dev) TUI framework includes `alien-projections` and `alien-resources` as part of its `@silvery/signals` package, adding React integration (`useSignal`), deep stores (`createStore`), and model factories on top.
+
 ## License
 
 MIT
