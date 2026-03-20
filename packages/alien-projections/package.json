@@ -1,0 +1,41 @@
+{
+  "name": "alien-projections",
+  "version": "0.1.0",
+  "description": "Incremental reactive collection transforms for the alien-signals ecosystem",
+  "keywords": [
+    "alien-signals",
+    "collection",
+    "computed",
+    "incremental",
+    "projection",
+    "reactive",
+    "signals",
+    "transform"
+  ],
+  "homepage": "https://github.com/beorn/bearlymade",
+  "bugs": {
+    "url": "https://github.com/beorn/bearlymade/issues"
+  },
+  "license": "MIT",
+  "author": "Beorn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beorn/bearlymade.git"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "type": "module",
+  "module": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "bun run build"
+  },
+  "peerDependencies": {
+    "alien-signals": ">=3.0.0"
+  }
+}
