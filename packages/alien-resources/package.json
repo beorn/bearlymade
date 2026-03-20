@@ -1,6 +1,6 @@
 {
   "name": "alien-resources",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Async signal bridge for alien-signals — reactive resources with loading/error states and automatic cancellation",
   "keywords": [
     "alien-signals",
@@ -18,7 +18,7 @@
     "tanstack-query",
     "tc39-signals"
   ],
-  "homepage": "https://github.com/beorn/bearlymade",
+  "homepage": "https://github.com/beorn/bearlymade/tree/main/packages/alien-resources",
   "bugs": {
     "url": "https://github.com/beorn/bearlymade/issues"
   },

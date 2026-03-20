@@ -1,6 +1,6 @@
 {
   "name": "alien-projections",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Incremental reactive collection transforms for the alien-signals ecosystem",
   "keywords": [
     "alien-signals",
@@ -19,7 +19,7 @@
     "tc39-signals",
     "transform"
   ],
-  "homepage": "https://github.com/beorn/bearlymade",
+  "homepage": "https://github.com/beorn/bearlymade/tree/main/packages/alien-projections",
   "bugs": {
     "url": "https://github.com/beorn/bearlymade/issues"
   },
