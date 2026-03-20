@@ -1,15 +1,22 @@
 {
   "name": "alien-projections",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Incremental reactive collection transforms for the alien-signals ecosystem",
   "keywords": [
     "alien-signals",
     "collection",
     "computed",
+    "derived",
+    "filter",
+    "fine-grained",
     "incremental",
+    "map",
     "projection",
     "reactive",
     "signals",
+    "solidjs",
+    "sort",
+    "tc39-signals",
     "transform"
   ],
   "homepage": "https://github.com/beorn/bearlymade",

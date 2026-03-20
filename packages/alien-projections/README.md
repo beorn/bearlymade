@@ -1,6 +1,6 @@
 # alien-projections
 
-Incremental reactive collection transforms for the [alien-signals](https://github.com/nicolo-ribaudo/alien-signals) ecosystem.
+Incremental reactive collection transforms for the [alien-signals](https://github.com/stackblitz/alien-signals) ecosystem.
 
 When one item in a large collection changes, only that item's mapped output is recomputed — not the entire collection.
 
@@ -63,6 +63,16 @@ On each recomputation:
 5. Filter and sort are applied to produce the final output.
 
 This means that if you have 10,000 items and change one, only that one item's `map` function runs.
+
+## Credits & Inspiration
+
+- **[alien-signals](https://github.com/stackblitz/alien-signals)** by [Johnson Chu](https://github.com/nicksrandall) — the reactive engine this package builds on. Fastest signals implementation, proven by Vue 3.6 adoption.
+- **[SolidJS](https://github.com/solidjs/solid)** by [Ryan Carniato](https://github.com/ryansolid) — pioneered the "projections" concept for reactive collection transforms. See his ["Beyond Signals" talk](https://www.youtube.com/watch?v=Ck-e3hd3pKw) (JSNation US 2025) and [`createProjection`](https://github.com/solidjs/signals) in `@solidjs/signals`.
+- **[Signia](https://github.com/tldraw/signia)** by [tldraw](https://tldraw.com) — incremental computation over large collections using logical clocks. Inspired the cache-based approach.
+
+### Compatibility
+
+This package is **not API-compatible** with SolidJS projections or Signia. It follows alien-signals conventions (callable accessors, `computed()` return type) and provides a broader API (filter + sort alongside map). SolidJS `createProjection` focuses on key-indexed UI reconciliation; this package targets general incremental collection transforms.
 
 ## License
 

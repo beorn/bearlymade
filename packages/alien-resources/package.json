@@ -1,14 +1,22 @@
 {
   "name": "alien-resources",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Async signal bridge for alien-signals — reactive resources with loading/error states and automatic cancellation",
   "keywords": [
     "alien-signals",
     "async",
     "cancellation",
+    "createResource",
+    "data-fetching",
+    "fine-grained",
+    "loading",
     "reactive",
     "resource",
-    "signals"
+    "signals",
+    "solidjs",
+    "suspense",
+    "tanstack-query",
+    "tc39-signals"
   ],
   "homepage": "https://github.com/beorn/bearlymade",
   "bugs": {

@@ -110,6 +110,17 @@ const resource = createResource(async (abort) => {
 resource.dispose()
 ```
 
+## Credits & Inspiration
+
+- **[alien-signals](https://github.com/stackblitz/alien-signals)** by [Johnson Chu](https://github.com/nicksrandall) — the reactive engine this package builds on. Fastest signals implementation, proven by Vue 3.6 adoption.
+- **[SolidJS](https://github.com/solidjs/solid)** by [Ryan Carniato](https://github.com/ryansolid) — pioneered `createResource` (Solid 1.x) and `createAsync` (Solid 2.0) for bridging async data into reactive graphs. The loading/error/refetch/mutate pattern originates here.
+- **[Angular](https://github.com/angular/angular)** — `resource()` (Angular 17+) provides a similar async-to-signal bridge with `.value()`, `.isLoading()`, `.error()`.
+- **[TanStack Query](https://github.com/TanStack/query)** — popularized the loading/error/refetch pattern for async data in React. Not signal-based, but the UX conventions (stale-while-revalidate, optimistic updates) influenced this API.
+
+### Compatibility
+
+This package is **not API-compatible** with SolidJS `createResource` or Angular `resource()`. It follows alien-signals conventions (callable accessors: `resource()` not `resource.value`, `.loading()` not `.loading`). SolidJS returns `[data, { loading, error, refetch, mutate }]` (tuple); this returns a single callable with signal sub-properties. The concepts are the same; the ergonomics match the alien-signals ecosystem.
+
 ## License
 
 MIT
