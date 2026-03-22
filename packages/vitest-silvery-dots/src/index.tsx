@@ -687,10 +687,7 @@ class DotzReporter implements Reporter {
   onTestModuleEnd(_: TestModule) {}
 
   async onTestRunEnd(testModules?: Iterable<TestModule>, errors?: readonly unknown[]) {
-    log.debug?.("onTestRunEnd", {
-      testModules: !!testModules,
-      errors: (errors as unknown[])?.length,
-    })
+    log.debug?.(`onTestRunEnd testModules=${!!testModules} errors=${(errors as unknown[])?.length}`)
     await this.finishRun()
   }
 

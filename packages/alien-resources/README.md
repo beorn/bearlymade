@@ -48,14 +48,14 @@ Creates a reactive resource that tracks an async fetcher.
 
 **Returns: `Resource<T>`**
 
-| Member | Type | Description |
-|--------|------|-------------|
-| `resource()` | `T \| undefined` | Read current data. `undefined` while loading (unless `initialValue` set). |
-| `resource.loading()` | `boolean` | Whether a fetch is in progress. |
-| `resource.error()` | `Error \| null` | Error from last fetch, or `null`. |
-| `resource.refetch()` | `void` | Manually trigger a re-fetch. |
-| `resource.mutate(value)` | `void` | Optimistically set data (overwritten on next fetch). |
-| `resource.dispose()` | `void` | Stop tracking, cancel in-flight fetches. |
+| Member                   | Type             | Description                                                               |
+| ------------------------ | ---------------- | ------------------------------------------------------------------------- |
+| `resource()`             | `T \| undefined` | Read current data. `undefined` while loading (unless `initialValue` set). |
+| `resource.loading()`     | `boolean`        | Whether a fetch is in progress.                                           |
+| `resource.error()`       | `Error \| null`  | Error from last fetch, or `null`.                                         |
+| `resource.refetch()`     | `void`           | Manually trigger a re-fetch.                                              |
+| `resource.mutate(value)` | `void`           | Optimistically set data (overwritten on next fetch).                      |
+| `resource.dispose()`     | `void`           | Stop tracking, cancel in-flight fetches.                                  |
 
 ## How It Works
 
@@ -69,10 +69,7 @@ Creates a reactive resource that tracks an async fetcher.
 ### Initial value
 
 ```typescript
-const data = createResource(
-  async () => fetchExpensiveData(),
-  { initialValue: [] }
-)
+const data = createResource(async () => fetchExpensiveData(), { initialValue: [] })
 // data() returns [] immediately, then the fetched result
 ```
 

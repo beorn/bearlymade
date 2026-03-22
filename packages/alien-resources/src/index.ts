@@ -73,10 +73,7 @@ export interface Resource<T> {
  * @param options - Optional configuration (initialValue).
  * @returns A Resource signal.
  */
-export function createResource<T>(
-  fetcher: ResourceFetcher<T>,
-  options?: ResourceOptions<T>,
-): Resource<T> {
+export function createResource<T>(fetcher: ResourceFetcher<T>, options?: ResourceOptions<T>): Resource<T> {
   const _data = signal<T | undefined>(options?.initialValue)
   const _loading = signal(false)
   const _error = signal<Error | null>(null)
@@ -102,13 +99,14 @@ export function createResource<T>(
     _loading(true)
     _error(null)
 
-    fetcher(controller.signal).then(
+    void fetcher(controller.signal).then(
       (result) => {
         // Only apply if this is still the latest fetch.
         if (id !== fetchId) return
         _data(result)
         _loading(false)
         abortController = null
+        return
       },
       (err) => {
         // Ignore superseded requests.
@@ -118,6 +116,7 @@ export function createResource<T>(
         _error(err instanceof Error ? err : new Error(String(err)))
         _loading(false)
         abortController = null
+        return
       },
     )
   }
