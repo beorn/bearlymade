@@ -38,7 +38,7 @@
     "prepublishOnly": "bun run build"
   },
   "peerDependencies": {
-    "@silvery/react": ">=0.1.0",
+    "@silvery/ag-react": ">=0.1.0",
     "@silvery/test": ">=0.1.0",
     "react": ">=19.0.0",
     "vitest": ">=4.0.0"

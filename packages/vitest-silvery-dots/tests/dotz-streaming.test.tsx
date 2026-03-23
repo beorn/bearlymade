@@ -7,7 +7,7 @@
 
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest"
 import React from "react"
-import { render, createTerm } from "@silvery/react"
+import { render, createTerm } from "@silvery/ag-react"
 import { stripAnsi } from "@silvery/test"
 import { Writable } from "node:stream"
 
